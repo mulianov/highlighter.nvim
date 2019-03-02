@@ -46,7 +46,7 @@ class Highlighter:
         commands = self.make_syntax_commands(ctags_options, ftype)
         clear_commands = self.make_syntax_clear_commands(ftype)
         self.vim.call("highlighter#update_highlight", [clear_commands+' | '+commands, proot, ftype])
-        self.vim_echo("Highlighter: updated")
+        #self.vim_echo("Highlighter: updated")
 
     @neovim.command("HighlighterClear", range='', nargs='*')
     def clear(self, args, range):
